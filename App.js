@@ -7,13 +7,13 @@ import Feather from "react-native-vector-icons/Feather";
 //Screens
 import HomeScreen from "./Screens/Home";
 import StoreScreen from "./Screens/Store";
+import DetailStore from "./Screens/DetailStore";
+
+
 
 
 const Tab = createBottomTabNavigator();
 
-const storeProps = () => {
-
-}
 
 export default function App() {
   return (
