@@ -2,7 +2,7 @@ import * as React from "react";
 import { Text, View } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import Ionicons from "react-native-vector-icons/Feather";
+import Feather from "react-native-vector-icons/Feather";
 
 //Screens
 import HomeScreen from "./Screens/Home";
@@ -31,7 +31,7 @@ export default function App() {
             else if (route.name === "Detail"){
               iconName = focused ? "clipboard" : "clipboard";
             }
-              return <Ionicons name={iconName} size={size} color={color} />;
+              return <Feather name={iconName} size={size} color={color} />;
           },
           tabBarActiveTintColor: "tomato",
           tabBarInactiveTintColor: "gray",

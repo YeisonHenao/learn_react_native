@@ -27,6 +27,8 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "description": "Try consume Api and learning react native",
+    "githubUrl": "https://github.com/YeisonHenao/Test_native"
   }
 }
