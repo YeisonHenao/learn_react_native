@@ -1,6 +1,9 @@
 import React from "react";
-import { View, FlatList, Image , StyleSheet } from "react-native";
-import Allproduct from '../service/store/Allproduct'
+import { View, FlatList } from "react-native";
+import Allproduct from "../service/store/Allproduct";
+
+//Components
+import CardProducts from "./CardProducts";
 
 const ListProducts = () => {
   const [value, setValue] = React.useState("");
@@ -12,39 +15,20 @@ const ListProducts = () => {
 
   const getData = async () => {
     let response = await Allproduct();
-    console.log(response.data);
     return response.data;
   };
 
-  const style = StyleSheet.create({
-    container: {
-      flex: 1,
-      justifyContent: "center",
-      alignItems: "center",
-    },
-  });
+  const renderItem = ({ item }) => <CardProducts product={item} />;
 
-  const Item = ({title, image , price}) => (
-   <View>
-    <Text>{title}</Text>
-    <Image source={{uri:image}} style={{height:50,width:50}} />
-    <Text>{price}</Text>
-   </View>
-  );
-
-   const renderItem = ({value}) => {
-    <Item title={this.value.title} image={this.value.image} price={this.value.price} />
-   }
- 
-
-  return(
-   <View>
-     <FlatList 
-      data={value}
-      renderItem={renderItem}
-      keyExtractor={(value) => value.id}
-     />
-   </View>
+  return (
+    <View>
+      <FlatList
+        data={value}
+        renderItem={renderItem}
+        keyExtractor={(item) => item.id}
+        numColumns={2}
+      />
+    </View>
   );
 };
 
