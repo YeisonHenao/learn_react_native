@@ -6,7 +6,7 @@ const CardProducts = ({ product }) => {
   const style = StyleSheet.create({
     cardImage:{
       display:"flex",
-      width:'49.5%',
+      width:'48%',
       margin:4,
       justifyContent:'space-between',
       borderWidth:2,
