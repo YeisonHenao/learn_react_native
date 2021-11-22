@@ -1,32 +1,20 @@
 import * as React from "react";
-import { Text, View, StyleSheet, Button, Image } from "react-native";
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import { Text, View, Button, Image } from "react-native";
+import { useNavigation } from "@react-navigation/native";
 
 import ListProducts from "../Components/ListProducts";
 
-const Store = ({navigator}) => {
-
-  const StoreStack = createNativeStackNavigator();
-  function StoreStackScreen() {
-    return (
-      <StoreStack.Navigator>
-        <StoreStack.Screen name="Detail" component={DetailStore} />
-      </StoreStack.Navigator>
-    );
-  }
-
-  const style = StyleSheet.create({
-    container: {
-      flex: 1,
-      justifyContent: "center",
-      alignItems: "center",
-    },
-  });
+const Store = ({navigation}) => {
 
   return (
-    <View style={style.container}>
+    <View>
+      <Button
+        onPress={() => {
+          alert(navigation.navigate("Detail", { screen: "Detail" }));
+      }}
+        title="Detalles"
+      />
       <ListProducts />
-      <Button onPress={() => navigator.navigate("Detail")} title="Detalles" />
     </View>
   );
 };
