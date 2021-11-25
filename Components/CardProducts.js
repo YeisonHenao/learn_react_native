@@ -1,7 +1,6 @@
 import React from "react";
-import { TouchableOpacity , Image, StyleSheet , Text } from "react-native";
-import { useNavigation } from "@react-navigation/native";
-import StoreStackScreen from "../App.js";
+import { TouchableOpacity , Image, StyleSheet , Text  } from "react-native";
+import { useNavigation } from "@react-navigation/core";
 
 
 const CardProducts = ({ product }) => {
@@ -34,13 +33,9 @@ const CardProducts = ({ product }) => {
   return (
     <TouchableOpacity
       style={style.cardImage}
-      onPress={() =>
-        alert(
-          navigation.navigate(StoreStackScreen, {
-            name: "Store",
-            screen: "Detail",
-          })
-        )
+      onPress={() => {
+        navigation.navigate("Detail" , {product:product})
+        }
       }
     >
       <Text style={style.textData}>{product.title}</Text>

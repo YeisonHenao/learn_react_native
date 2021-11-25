@@ -2,7 +2,7 @@ import React  from 'react'
 import {View,Text,Button, StyleSheet} from 'react-native'
 
 
-const Home = () => {
+const Home = ({navigation}) => {
   
   const style = StyleSheet.create({
     container: {
@@ -15,6 +15,10 @@ const Home = () => {
   return(
     <View style={style.container}>
       <Text>Home</Text>
+      <Button 
+        title="Iniciar sesión"
+        onPress={() => navigation.navigate("Iniciar") }
+      />
     </View>
   );
 }
