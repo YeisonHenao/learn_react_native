@@ -1,19 +1,12 @@
 import * as React from "react";
-import { Text, View, Button, Image } from "react-native";
-import { useNavigation } from "@react-navigation/native";
+import { View } from "react-native";
 
 import ListProducts from "../Components/ListProducts";
 
-const Store = ({navigation}) => {
+const Store = () => {
 
   return (
     <View>
-      <Button
-        onPress={() => {
-          alert(navigation.navigate("Detail", { screen: "Detail" }));
-      }}
-        title="Detalles"
-      />
       <ListProducts />
     </View>
   );

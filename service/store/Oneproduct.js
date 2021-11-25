@@ -1,9 +1,10 @@
 import axios from "../../config/Store";
 
-export default async () => {
+export default async ( product ) => {
   return axios
-    .get(`/products/1`)
+    .get()
     .then((response) => {
+      console.log(product)
       if (response) {
         return response;
       } else {
@@ -14,3 +15,4 @@ export default async () => {
       console.log(error);
     });
 }
+
