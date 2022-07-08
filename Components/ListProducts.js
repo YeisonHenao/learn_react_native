@@ -1,15 +1,17 @@
-import React from "react";
-import { View, FlatList } from "react-native";
+import React, { useEffect, useState } from "react";
+import { View, Text, FlatList } from "react-native";
 import Allproduct from "../service/store/Allproduct";
 
 //Components
 import CardProducts from "./CardProducts";
 
 const ListProducts = () => {
-  const [value, setValue] = React.useState("");
+  const [value, setValue] = useState("");
+  const [loading, Isloading] = useState(true);
 
-  React.useEffect(async () => {
+  useEffect(async () => {
     const response = await getData();
+    Isloading(false);
     setValue(response || "No data");
   }, []);
 
@@ -21,14 +23,20 @@ const ListProducts = () => {
   const renderItem = ({ item }) => <CardProducts product={item} />;
 
   return (
-    <View>
-      <FlatList
-        data={value}
-        renderItem={renderItem}
-        keyExtractor={(item) => item.id}
-        numColumns={2}
-      />
-    </View>
+    <>
+      {loading ? (
+        <>
+          <Text>Cargando</Text>
+        </>
+      ) : (
+        <FlatList
+          data={value}
+          renderItem={renderItem}
+          keyExtractor={(item) => item.id}
+          numColumns={2}
+        />
+      )}
+    </>
   );
 };
 

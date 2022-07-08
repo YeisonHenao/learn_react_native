@@ -15,10 +15,6 @@ const Home = ({navigation}) => {
   return(
     <View style={style.container}>
       <Text>Home</Text>
-      <Button 
-        title="Iniciar sesión"
-        onPress={() => navigation.navigate("Iniciar") }
-      />
     </View>
   );
 }
