@@ -15,10 +15,8 @@ const BottomTabNavigator = () => {
           if (route.name === "Main") {
             iconName = focused ? "home" : "home";
           } else if (route.name === "Store") {
-            iconName = focused ? "shopping-cart" : "shopping-cart";
-          } else if (route.name === "Detail") {
-            iconName = focused ? "clipboard" : "clipboard";
-          }
+            iconName = focused ? "shopping-bag" : "shopping-bag";
+          } 
           return <Feather name={iconName} size={size} color={color} />;
         },
         tabBarActiveTintColor: "tomato",

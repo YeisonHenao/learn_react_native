@@ -1,28 +1,37 @@
 import React from "react";
-import { createStackNavigator } from '@react-navigation/stack'
+import { createStackNavigator } from "@react-navigation/stack";
 
 //componentes
 import Home from "../Screens/Home";
-import Store from '../Screens/Store'
-import DetailStore from '../Screens/DetailStore'
+import Store from "../Screens/Store";
+import DetailStore from "../Screens/DetailStore";
+import ShoppingCart from "../Screens/ShoppingCart";
 
 const Stack = createStackNavigator();
 
 const MainStackNavigator = () => {
-    return(
-        <Stack.Navigator >
-            <Stack.Screen name = "Principal" component={Home} />
-        </Stack.Navigator>
-    );
-}
+  return (
+    <Stack.Navigator>
+      <Stack.Screen name="Home" component={Home} />
+    </Stack.Navigator>
+  );
+};
 
 const StoreStackNavigation = () => {
-    return(
-        <Stack.Navigator >
-            <Stack.Screen name = "Tienda" component={Store} />
-            <Stack.Screen name = "Detail" component={DetailStore} />
-        </Stack.Navigator>
-    );
-}
+  return (
+    <Stack.Navigator>
+      <Stack.Screen name="Store" component={Store} />
+      <Stack.Screen name="Detail" component={DetailStore} />
+    </Stack.Navigator>
+  );
+};
 
-export {MainStackNavigator , StoreStackNavigation };
+const ShoppingCartNavigation = () => {
+  return (
+    <Stack.Navigator>
+      <Stack.Screen name="Shopping Cart" component={ShoppingCart} />
+    </Stack.Navigator>
+  );
+};
+
+export { MainStackNavigator, StoreStackNavigation , ShoppingCartNavigation };
