@@ -6,7 +6,7 @@ const style = StyleSheet.create({
     width: "48%",
     margin: 5,
     justifyContent: "space-between",
-    borderWidth: 2,
+    borderWidth: 1,
     borderRadius: 10,
     borderColor: "#000",
   },
@@ -21,6 +21,10 @@ const style = StyleSheet.create({
   textData: {
     textAlign: "center",
   },
+  textPrice:{
+    textAlign:"center",
+    color:"red",
+  }
 });
 
 export default style;

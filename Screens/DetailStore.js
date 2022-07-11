@@ -21,7 +21,7 @@ const DetailStore = ({ route }) => {
           <Text style={style.descriptionText}>
             {JSON.stringify(data.description).slice(1, -1)}
           </Text>
-          <Text style={style.priceText}>{JSON.stringify(data.price)}</Text>
+          <Text style={style.priceText}>${JSON.stringify(data.price)}</Text>
       </ScrollView>
     </>
   );
