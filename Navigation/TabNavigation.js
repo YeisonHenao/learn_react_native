@@ -1,6 +1,6 @@
 import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { MainStackNavigator, StoreStackNavigation } from "./StackStore";
+import { MainStackNavigator, StoreStackNavigation , ConfigurtionStackNavigation } from "./StackStore";
 import Feather from "react-native-vector-icons/Feather";
 
 
@@ -16,16 +16,27 @@ const BottomTabNavigator = () => {
             iconName = focused ? "home" : "home";
           } else if (route.name === "Store") {
             iconName = focused ? "shopping-bag" : "shopping-bag";
-          } 
+          } else if (route.name === "Configuration") {
+            iconName = focused ? "settings" : "settings";
+          }
           return <Feather name={iconName} size={size} color={color} />;
         },
-        tabBarActiveTintColor: "tomato",
-        tabBarInactiveTintColor: "gray",
-        headerShown:false
-      })}
+        tabBarActiveTintColor: "#256CD3",
+        tabBarInactiveTintColor: "#fff",
+        headerShown:false,
+        tabBarStyle:{
+          backgroundColor: "#1E1E1E",
+          borderTopRightRadius:8,
+          borderTopLeftRadius:8,
+          paddingBottom:6,
+          height:60,
+        }
+      })
+    }
     >
       <Tab.Screen name="Main" component={MainStackNavigator} />
       <Tab.Screen name="Store" component={StoreStackNavigation} />
+      <Tab.Screen name="Configuration" component={ConfigurtionStackNavigation} />
     </Tab.Navigator>
   );
 };

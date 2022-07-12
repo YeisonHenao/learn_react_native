@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { View,Text, FlatList } from "react-native";
+import { View, Text , ActivityIndicator ,  FlatList } from "react-native";
 import Allproduct from "../service/store/Allproduct";
-import style from '../assets/Styles/ListProductsStyle'
+import style from '../assets/Styles/LoadingStyle';
 
 //Components
 import CardProducts from "./CardProducts";
@@ -27,7 +27,8 @@ const ListProducts = () => {
     <>
       {loading ? (
         <View style={style.container}>
-          <Text style={style.loadView}>Cargando</Text>
+          <Text style={style.text}>Cargando...</Text>
+          <ActivityIndicator size="large" color="#256CD3" />
         </View>
       ) : (
         <FlatList

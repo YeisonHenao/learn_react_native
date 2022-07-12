@@ -4,19 +4,20 @@ const style = StyleSheet.create({
   image: {
     height: "50%",
     width: "80%",
-    borderRadius: 10,
+    borderRadius: 25,
     alignSelf: "center",
-    marginTop: 5,
-    marginBottom: 5,
+    marginTop: 20,
+    marginBottom: 20,
   },
   headerTitle: {
     textAlign: "center",
     fontWeight: "bold",
     fontSize: 20,
+    margin: 20,
   },
   descriptionText: {
     fontSize: 16,
-    margin: 8,
+    margin: 15,
   },
   priceText: {
     textAlign: "center",
