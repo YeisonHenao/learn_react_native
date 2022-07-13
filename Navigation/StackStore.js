@@ -1,48 +1,56 @@
 import React from "react";
 import { createStackNavigator } from "@react-navigation/stack";
+import { SafeAreaProvider } from "react-native-safe-area-context";
 
 //componentes
-import Home from "../Screens/Home";
-import Store from "../Screens/Store";
-import DetailStore from "../Screens/DetailStore";
-import ShoppingCart from "../Screens/ShoppingCart";
+import HomeView from "../Screens/Home";
+import StoreView from "../Screens/Store";
+import DetailStoreView from "../Screens/DetailStore";
+import ShoppingCartView from "../Screens/ShoppingCart";
 import ConfigurationView from "../Screens/ConfigurationView";
 
 const Stack = createStackNavigator();
 
 const MainStackNavigator = () => {
   return (
-    <Stack.Navigator screenOptions={{ headerShown: false }}>
-      <Stack.Screen name="Home" component={Home} />
-    </Stack.Navigator>
+    <SafeAreaProvider>
+      <Stack.Navigator screenOptions={{ headerShown: false }}>
+        <Stack.Screen name="Home" component={HomeView} />
+      </Stack.Navigator>
+    </SafeAreaProvider>
   );
 };
 
 const StoreStackNavigation = () => {
   return (
-    <Stack.Navigator
-      screenOptions={{
-        headerShown: true,
-        headerTintColor: "#fff",
-        headerStyle: {
-          backgroundColor: "#000",
-          borderBottomRightRadius: 8,
-          borderBottomLeftRadius: 8,
-        },
-      }}
-    >
-      <Stack.Screen name="Store" component={Store} />
-      <Stack.Screen name="Detail" component={DetailStore} />
-      <Stack.Screen name="Shopping Cart" component={ShoppingCart} />
-    </Stack.Navigator>
+    <SafeAreaProvider>
+      <Stack.Navigator
+        screenOptions={{
+          headerShown: true,
+          headerTintColor: "#fff",
+          headerTitleAlign: "center",
+          headerStyle: {
+            backgroundColor: "#1E1E1E",
+            borderBottomRightRadius: 8,
+            borderBottomLeftRadius: 8,
+          },
+        }}
+      >
+        <Stack.Screen name="Store" component={StoreView} />
+        <Stack.Screen name="Detail" component={DetailStoreView} />
+        <Stack.Screen name="Shopping Cart" component={ShoppingCartView} />
+      </Stack.Navigator>
+    </SafeAreaProvider>
   );
 };
 
 const ConfigurtionStackNavigation = () => {
   return (
-    <Stack.Navigator screenOptions={{ headerShown: false }}>
-      <Stack.Screen name="Configuration" component={ConfigurationView} />
-    </Stack.Navigator>
+    <SafeAreaProvider>
+      <Stack.Navigator screenOptions={{ headerShown: false }}>
+        <Stack.Screen name="Configuration" component={ConfigurationView} />
+      </Stack.Navigator>
+    </SafeAreaProvider>
   );
 };
 

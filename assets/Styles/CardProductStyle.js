@@ -12,11 +12,11 @@ const style = StyleSheet.create({
   },
   image: {
     height: 100,
-    width: 100,
+    width: "80%",
     borderRadius: 10,
     alignSelf: "center",
-    marginTop: 5,
-    marginBottom: 5,
+    padding: 10,
+    resizeMode: "contain",
   },
   textData: {
     textAlign: "center",

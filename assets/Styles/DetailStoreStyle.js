@@ -4,10 +4,11 @@ const style = StyleSheet.create({
   image: {
     height: "50%",
     width: "80%",
-    borderRadius: 25,
+    borderRadius: 5,
     alignSelf: "center",
     marginTop: 20,
     marginBottom: 20,
+    resizeMode: "contain",
   },
   headerTitle: {
     textAlign: "center",
@@ -23,10 +24,6 @@ const style = StyleSheet.create({
     textAlign: "center",
     fontSize: 16,
     color: "red",
-  },
-  scroll: {
-    backgroundColor: "#fff",
-    flex: 1,
   },
 });
 
