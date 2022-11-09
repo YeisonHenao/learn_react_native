@@ -1,6 +1,7 @@
 import React from "react";
 import { createStackNavigator } from "@react-navigation/stack";
 import { SafeAreaProvider } from "react-native-safe-area-context";
+import BadgeShoppingCart from "../Components/BadgeShoppingCart";
 
 //componentes
 import HomeView from "../Screens/Home";
@@ -25,7 +26,8 @@ const StoreStackNavigation = () => {
   return (
     <SafeAreaProvider>
       <Stack.Navigator
-        screenOptions={{
+        screenOptions={({ route }) => ({
+          NameTitle: () => {},
           headerShown: true,
           headerTintColor: "#fff",
           headerTitleAlign: "center",
@@ -34,9 +36,13 @@ const StoreStackNavigation = () => {
             borderBottomRightRadius: 8,
             borderBottomLeftRadius: 8,
           },
-        }}
+        })}
       >
-        <Stack.Screen name="Store" component={StoreView} />
+        <Stack.Screen
+          name="StoreList"
+          options={{ title: "Store", headerRight: () => <BadgeShoppingCart /> }}
+          component={StoreView}
+        />
         <Stack.Screen name="Detail" component={DetailStoreView} />
         <Stack.Screen name="Shopping Cart" component={ShoppingCartView} />
       </Stack.Navigator>
@@ -48,7 +54,7 @@ const ConfigurtionStackNavigation = () => {
   return (
     <SafeAreaProvider>
       <Stack.Navigator screenOptions={{ headerShown: false }}>
-        <Stack.Screen name="Configuration" component={ConfigurationView} />
+        <Stack.Screen name="Configure" component={ConfigurationView} />
       </Stack.Navigator>
     </SafeAreaProvider>
   );
