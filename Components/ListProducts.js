@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { View, Text , ActivityIndicator ,  FlatList } from "react-native";
 import Allproduct from "../service/store/Allproduct";
-import style from '../assets/Styles/LoadingStyle';
 
 //Components
 import CardProducts from "./CardProducts";
+import LoadingView from "./LoadingView";
 
 const ListProducts = () => {
   const [value, setValue] = useState("");
@@ -26,10 +26,7 @@ const ListProducts = () => {
   return (
     <>
       {loading ? (
-        <View style={style.container}>
-          <Text style={style.text}>Cargando...</Text>
-          <ActivityIndicator size="large" color="#256CD3" />
-        </View>
+        <LoadingView />
       ) : (
         <FlatList
           data={value}
