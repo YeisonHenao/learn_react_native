@@ -1,27 +1,32 @@
-import { StyleSheet } from "react-native";
+import { StyleSheet , Dimensions } from "react-native";
+
+const widthDevice = Dimensions.get('window').width;
+const heightDevice = Dimensions.get('window').height;
 
 const style = StyleSheet.create({
   cardImage: {
-    display: "flex",
-    width: "47%",
+    width: widthDevice - 10,
     margin: 5,
-    justifyContent: "space-between",
     borderWidth: 1,
     borderRadius: 8,
     borderColor: "#000",
+    height: heightDevice - 180
   },
   image: {
-    height: 100,
-    width: "80%",
+    height: heightDevice - 300,
+    width: widthDevice - 100,
     borderRadius: 10,
     alignSelf: "center",
     padding: 10,
     resizeMode: "contain",
+    marginBottom: 30,
+    marginTop: 20
   },
-  textData: {
+  textTitle: {
     textAlign: "center",
     fontSize: 15,
     fontWeight: "bold",
+    marginTop: 20
   },
   textPrice:{
     textAlign:"center",

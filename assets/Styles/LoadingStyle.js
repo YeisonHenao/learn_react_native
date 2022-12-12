@@ -1,5 +1,8 @@
-import { StyleSheet } from "react-native";
+import { StyleSheet , Dimensions } from "react-native";
 import { color } from "react-native-reanimated";
+
+const widthDevice = Dimensions.get('window').width;
+const heightDevice = Dimensions.get('window').height;
 
 const style = StyleSheet.create({
     container: {

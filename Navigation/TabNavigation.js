@@ -1,11 +1,11 @@
 import React from "react";
+import { SafeAreaProvider } from "react-native-safe-area-context";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import {
   MainStackNavigator,
   StoreStackNavigation,
   ConfigurtionStackNavigation,
 } from "./StackStore";
-import { SafeAreaProvider } from "react-native-safe-area-context";
 import Feather from "react-native-vector-icons/Feather";
 
 const Tab = createBottomTabNavigator();
@@ -30,9 +30,8 @@ const BottomTabNavigator = () => {
           tabBarInactiveTintColor: "#fff",
           headerShown: false,
           tabBarStyle: {
-            backgroundColor: "#1E1E1E",
-            borderTopRightRadius: 8,
-            borderTopLeftRadius: 8,
+            backgroundColor: "#232223",
+              borderColor:"#232223",
             paddingBottom: 6,
             height: 60,
           },
@@ -45,7 +44,7 @@ const BottomTabNavigator = () => {
           component={ConfigurtionStackNavigation}
         />
       </Tab.Navigator>
-    </SafeAreaProvider>
+    </SafeAreaProvider>   
   );
 };
 

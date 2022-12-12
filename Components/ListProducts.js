@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { View, Text , ActivityIndicator ,  FlatList } from "react-native";
+import { FlatList } from "react-native";
 import Allproduct from "../service/store/Allproduct";
 
 //Components
@@ -32,7 +32,7 @@ const ListProducts = () => {
           data={value}
           renderItem={renderItem}
           keyExtractor={(item) => item.id}
-          numColumns={2}
+          numColumns={1}
         />
       )}
     </>
