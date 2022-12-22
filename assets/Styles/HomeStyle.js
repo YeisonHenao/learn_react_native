@@ -14,8 +14,8 @@ const style = StyleSheet.create({
     color: "#fff"
   },
   Image:{
-    width: widthWindow - 100,
-    height: heightWindow - 200,
+    width: 150,
+    height: 150,
   }
 });
 

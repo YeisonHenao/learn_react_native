@@ -4,9 +4,10 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import {
   MainStackNavigator,
   StoreStackNavigation,
-  ConfigurtionStackNavigation,
+  RickAndMortyStackNavigation,
 } from "./StackStore";
 import Feather from "react-native-vector-icons/Feather";
+
 
 const Tab = createBottomTabNavigator();
 
@@ -21,8 +22,8 @@ const BottomTabNavigator = () => {
               iconName = focused ? "home" : "home";
             } else if (route.name === "Store") {
               iconName = focused ? "shopping-bag" : "shopping-bag";
-            } else if (route.name === "Configuration") {
-              iconName = focused ? "settings" : "settings";
+            } else if (route.name === "Rick And Morty") {
+              iconName = focused ? "film" : "film";
             }
             return <Feather name={iconName} size={size} color={color} />;
           },
@@ -40,8 +41,8 @@ const BottomTabNavigator = () => {
         <Tab.Screen name="Main" component={MainStackNavigator} />
         <Tab.Screen name="Store" component={StoreStackNavigation} />
         <Tab.Screen
-          name="Configuration"
-          component={ConfigurtionStackNavigation}
+          name="Rick And Morty"
+          component={RickAndMortyStackNavigation}
         />
       </Tab.Navigator>
     </SafeAreaProvider>   

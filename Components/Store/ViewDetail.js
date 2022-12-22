@@ -1,6 +1,6 @@
 import React from "react";
 import { View, Text, Image, SafeAreaView } from "react-native";
-import style from "../assets/Styles/DetailStoreStyle";
+import style from "../../assets/Styles/DetailStoreStyle";
 
 const ViewDetail = ({ product }) => {
   const data = product;

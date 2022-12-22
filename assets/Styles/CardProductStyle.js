@@ -10,10 +10,10 @@ const style = StyleSheet.create({
     borderWidth: 1,
     borderRadius: 8,
     borderColor: "#000",
-    height: heightDevice - 180
+    height: heightDevice - 380
   },
   image: {
-    height: heightDevice - 300,
+    height: heightDevice - 500,
     width: widthDevice - 100,
     borderRadius: 10,
     alignSelf: "center",

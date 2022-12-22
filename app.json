@@ -23,12 +23,18 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
-      }
+      },
+      "package": "com.alexander_henao.test"
     },
     "web": {
       "favicon": "./assets/favicon.png"
     },
     "description": "Try consume Api and learning react native",
-    "githubUrl": "https://github.com/YeisonHenao/Test_native"
+    "githubUrl": "https://github.com/YeisonHenao/Test_native",
+    "extra": {
+      "eas": {
+        "projectId": "d4ee03eb-66fc-4da0-84f7-f1d62992ff0c"
+      }
+    }
   }
 }
