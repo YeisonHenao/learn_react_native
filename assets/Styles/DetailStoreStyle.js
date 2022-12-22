@@ -1,9 +1,17 @@
-import { StyleSheet } from "react-native";
+import { StyleSheet, Dimensions } from "react-native";
+
+const height = Dimensions.get("window").height;
+const width = Dimensions.get("window").width;
+
 
 const style = StyleSheet.create({
+  container:{
+    height: height,
+    width: width
+  },  
   image: {
-    height: "50%",
-    width: "80%",
+    height: height - 500,
+    width: width - 100,
     borderRadius: 5,
     alignSelf: "center",
     marginTop: 20,
