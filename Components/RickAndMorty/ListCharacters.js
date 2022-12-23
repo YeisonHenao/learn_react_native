@@ -3,7 +3,7 @@ import { useEffect , useState } from "react"
 import { Text , FlatList } from "react-native"
 import LoadingView from "../Common/LoadingView"
 import CardCharacter from "./CardCharacter"
-import GetCharacters from "../../repository/Rick And Morty/RepositoryRickAndMorty"
+import GetAllCharacters from "../../repository/Rick And Morty/RepositoryRickAndMorty"
 
 export default ListCharacters = () => {
 
@@ -15,7 +15,7 @@ export default ListCharacters = () => {
       if(value != ""){
         return
       } else{
-        let response = await GetCharacters();
+        let response = await GetAllCharacters();
         SetValue(response.results);
         IsLoading(false);
       }

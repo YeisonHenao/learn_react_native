@@ -33,6 +33,12 @@ const style = StyleSheet.create({
     fontSize: 16,
     color: "red",
   },
+  buttonAdd:{
+    marginTop: 20,
+    paddingLeft: 10,
+    paddingRight: 10,
+    borderRadius: 8,
+  }
 });
 
 export default style;

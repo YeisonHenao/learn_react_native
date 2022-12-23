@@ -1,6 +1,6 @@
 import service from '../../service/RickAndMorty'
 
-  const GetCharacters = async () => {
+  const GetAllCharacters = async () => {
     let response = await service.AllCharacters();
     if (response) {
       return response.data
@@ -9,4 +9,4 @@ import service from '../../service/RickAndMorty'
     }
   }
 
-export default GetCharacters;
+export default GetAllCharacters;
