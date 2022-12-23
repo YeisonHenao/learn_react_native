@@ -1,7 +1,7 @@
 import React from "react";
 import { Text, Image, SafeAreaView , ScrollView } from "react-native";
 import {Divider} from 'react-native-paper'
-import style from "../../assets/Styles/DetailStoreStyle";
+import style from "../../assets/Styles/StoreStyles/DetailStoreStyle";
 
 const ViewDetail = ({ product }) => {
   const data = product;
