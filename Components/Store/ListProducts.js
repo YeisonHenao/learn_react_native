@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { FlatList } from "react-native";
-import Allproduct from "../../service/store/Allproduct";
+import GetAllProducts from "../../repository/Store/RepositoryStore";
 
 //Components
 import CardProducts from "./CardProducts";
@@ -11,15 +11,20 @@ const ListProducts = () => {
   const [loading, Isloading] = useState(true);
 
   useEffect(async () => {
-    const response = await getData();
-    Isloading(false);
-    setValue(response || "No data");
+
+    try{
+      if(value != ""){
+        return
+      }else{
+        let response = await GetAllProducts();
+        Isloading(false);
+        setValue(response || "No data");
+      }
+    }catch(error){
+      console.log(error)
+    }
   }, []);
 
-  const getData = async () => {
-    let response = await Allproduct();
-    return response.data;
-  };
 
   const renderItem = ({ item }) => <CardProducts product={item} />;
 
