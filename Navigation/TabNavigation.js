@@ -1,13 +1,9 @@
 import React from "react";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import {
-  MainStackNavigator,
-  StoreStackNavigation,
-  RickAndMortyStackNavigation,
-} from "./StackStore";
+import { StoreStackNavigation, RickAndMortyStackNavigation} from "./StackStore";
+import HomeDrawerNavigator from '../Navigation/DrawerNavigation'
 import Feather from "react-native-vector-icons/Feather";
-
 
 const Tab = createBottomTabNavigator();
 
@@ -38,7 +34,7 @@ const BottomTabNavigator = () => {
           },
         })}
       >
-        <Tab.Screen name="Main" component={MainStackNavigator} />
+        <Tab.Screen name="Main" component={HomeDrawerNavigator} />
         <Tab.Screen name="Store" component={StoreStackNavigation} />
         <Tab.Screen
           name="Rick And Morty"

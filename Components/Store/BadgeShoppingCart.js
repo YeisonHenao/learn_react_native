@@ -15,7 +15,6 @@ function BadgeShoppingCart() {
         navigation.navigate("Cart")
         }}
       >
-        <Text>{value}</Text>
         <Feather
           name="shopping-cart"
           size={16}
