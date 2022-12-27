@@ -30,7 +30,7 @@ const StoreStackNavigation = () => {
           NameTitle: () => {},
           headerShown: true,
           headerTintColor: "#fff",
-          headerTitleAlign: "center",
+          headerTitleAlign: "left",
           headerStyle: {
             backgroundColor: "#1E1E1E",
             borderBottomRightRadius: 8,
@@ -43,8 +43,12 @@ const StoreStackNavigation = () => {
           options={{ title: "Store", headerRight: () => <BadgeShoppingCart /> }}
           component={StoreView}
         />
-        <Stack.Screen name="Detail" component={DetailStoreView} />
-        <Stack.Screen name="Shopping Cart" component={ShoppingCartView} />
+        <Stack.Screen 
+          name="Detail" 
+          options={{ title: "Store", headerRight: () => <BadgeShoppingCart /> }} 
+          component={DetailStoreView} 
+          />
+        <Stack.Screen name="Cart" component={ShoppingCartView} />
       </Stack.Navigator>
     </SafeAreaProvider>
   );

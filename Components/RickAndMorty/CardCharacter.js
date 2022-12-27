@@ -1,14 +1,20 @@
-import { TouchableOpacity, Image, Text } from "react-native";
+import { TouchableOpacity, Image, Text, SafeAreaView } from "react-native";
 import { useNavigation } from "@react-navigation/core";
+import style from '../../assets/Styles/RickAndMortyStyles/CardCharacter'
 
-const CardCharacter = ({character}) => {
+const CardCharacter = ({ character }) => {
   const navigation = useNavigation();
 
-  return(
-    <TouchableOpacity>
-      <Text>{character.name}</Text>
-    </TouchableOpacity>
-  )
-}
+  return (
+    <SafeAreaView>
+      <TouchableOpacity style={style.container}>
+        <Image 
+          source={{uri: character.image}} style={style.image}
+        />
+        <Text style={style.nameCharacter}>{character.name}</Text>
+      </TouchableOpacity>
+    </SafeAreaView>
+  );
+};
 
 export default CardCharacter;

@@ -19,7 +19,7 @@ const style = StyleSheet.create({
     alignSelf: "center",
     padding: 10,
     resizeMode: "contain",
-    marginBottom: 30,
+    marginBottom: 10,
     marginTop: 20
   },
   textTitle: {
