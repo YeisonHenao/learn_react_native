@@ -29,10 +29,10 @@ const StoreStackNavigation = () => {
         screenOptions={({ route }) => ({
           NameTitle: () => {},
           headerShown: true,
-          headerTintColor: "#fff",
+          headerTintColor: "#000",
           headerTitleAlign: "left",
           headerStyle: {
-            backgroundColor: "#1E1E1E",
+            backgroundColor: "#CCD6A6",
             borderBottomRightRadius: 8,
             borderBottomLeftRadius: 8,
           },
