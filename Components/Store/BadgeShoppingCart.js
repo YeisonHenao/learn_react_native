@@ -17,9 +17,9 @@ function BadgeShoppingCart() {
       >
         <Feather
           name="shopping-cart"
-          size={16}
-          style={{ marginRight: 20 }}
-          color={"#fff"}
+          size={20}
+          style={{ marginRight: 25 , marginTop:10 }}
+          color={"#000"}
         />
       </TouchableOpacity>
     </View>

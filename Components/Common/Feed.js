@@ -1,11 +1,17 @@
-import { Text , View , Button } from "react-native";
+import { Text , View  } from "react-native";
+import style from "../../assets/Styles/StoreStyles/FeedStyle";
+import BadgeUser from "./BadgeUser";
 
 const Feed = ({ navigation }) => {
   return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Feed Screen</Text>
-      <Button title="Open drawer" onPress={() => navigation.openDrawer()} />
-      <Button title="Toggle drawer" onPress={() => navigation.toggleDrawer()} />
+    <View style={style.container}>
+        <View style={style.headerComponent} >
+        </View>
+        <View style={style.title}>
+          <BadgeUser/>
+        </View>
+      {/* <Text style={style.title}>Home Screen</Text> */}
+
     </View>
   );
 }
