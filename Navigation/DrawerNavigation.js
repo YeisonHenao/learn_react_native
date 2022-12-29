@@ -15,43 +15,6 @@ import Notifications from '../Components/Common/Notifications';
 
 
 
-const defaultOptions =({})=>({
-  //Show sandwith-menu icon at the right
-  headerLeft: () => {
-        return (
-          <>
-            <Pressable onPress={() => DrawerActions.openDrawer()}>
-              <Feather
-                name={"menu"}
-                size={32}
-                color={"#000"}
-                style={{ marginRight: 10 }}
-              />
-            </Pressable>
-          </>
-        );
-      },
-   //Hide the left icon menu
-   //headerLeftContainerStyle: { display: "none" },
-      headerLeftContainerStyle: {
-        display: "flex",
-        justifyContent: "flex-start",
-        flexDirection: "row",
-        alignItems: "center",
-        marginRight: 10,
-      },
-      //Hide the left menu Title
-      headerTitleStyle: {
-        display: "none",
-      },
-      headerShown: false,
-      drawerPosition: "left",
-  })
-
-
-
-
-
 const CustomDrawerContent =(props) => {
   return (
     <DrawerContentScrollView {...props}>
@@ -65,7 +28,7 @@ const Drawer = createDrawerNavigator();
 const HomeDrawerNavigator = () => {
   return (
     <Drawer.Navigator
-        screenOptions={defaultOptions}
+        screenOptions={{headerShown:true}}
         useLegacyImplementation
         drawerContent={(props) => <CustomDrawerContent {...props} />}
     >
@@ -86,7 +49,7 @@ const HomeDrawerNavigator = () => {
       <Drawer.Screen 
         name="Notifications"
         options={{
-          title: "Home",
+          title: "Notifications",
           drawerIcon: ({ color, size, focuced }) => (
             <Feather
               name={focuced ? "bell" : "bell"}

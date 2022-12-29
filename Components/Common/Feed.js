@@ -10,8 +10,6 @@ const Feed = ({ navigation }) => {
         <View style={style.title}>
           <BadgeUser/>
         </View>
-      {/* <Text style={style.title}>Home Screen</Text> */}
-
     </View>
   );
 }

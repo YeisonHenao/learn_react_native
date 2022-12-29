@@ -5,21 +5,26 @@ const heightDevice = Dimensions.get('window').height;
 
 const style = StyleSheet.create({
   cardImage: {
-    width: widthDevice - 10,
-    margin: 5,
-    borderWidth: 1,
-    borderRadius: 8,
-    borderColor: "#000",
-    height: heightDevice - 380
+    width: widthDevice - 40,
+    height: heightDevice - 380,
+    margin: 20,
+    padding:10,
+    borderRadius:10,
+    shadowColor: 'black',
+    shadowOpacity: 0.26,
+    shadowOffset: { width: 0, height: 2},
+    shadowRadius: 10,
+    elevation: 3,
+    backgroundColor: 'white'
   },
   image: {
-    height: heightDevice - 500,
+    height: heightDevice - 550,
     width: widthDevice - 100,
     borderRadius: 10,
     alignSelf: "center",
     padding: 10,
     resizeMode: "contain",
-    marginBottom: 10,
+    marginBottom: 20,
     marginTop: 20
   },
   textTitle: {
@@ -31,6 +36,7 @@ const style = StyleSheet.create({
   textPrice:{
     textAlign:"center",
     color:"red",
+    margin:8
   }
 });
 
