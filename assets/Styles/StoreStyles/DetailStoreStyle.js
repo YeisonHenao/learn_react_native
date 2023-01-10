@@ -33,11 +33,34 @@ const style = StyleSheet.create({
     fontSize: 16,
     color: "red",
   },
+  ViewButtons:{
+    display:"flex",
+    flexDirection:"row",
+    alignContent:"space-between"
+  },
   buttonAdd:{
-    marginTop: 20,
+    display:"flex",
+    flexDirection:"row",
+    margin:15,
     paddingLeft: 10,
     paddingRight: 10,
     borderRadius: 8,
+    width:150,
+    height:40,
+    backgroundColor:"#3656A4"
+  },
+  buttonBuyNow:{
+    display:"flex",
+    flexDirection:"row",
+    alignContent:"center",
+    alignSelf:"center",
+    margin:15,
+    paddingLeft: 10,
+    paddingRight: 10,
+    borderRadius: 8,
+    width:150,
+    height:40,
+    backgroundColor:"#438B31"
   }
 });
 

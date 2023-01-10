@@ -1,24 +1,21 @@
 import React, { useEffect, useState } from "react";
 import { FlatList } from "react-native";
 import GetAllProducts from "../../repository/Store/RepositoryStore";
-
-//Components
 import CardProducts from "./CardProducts";
 import LoadingView from "../Common/LoadingView";
 
 const ListProducts = () => {
   const [value, setValue] = useState("");
-  const [loading, Isloading] = useState(true);
+  const [wait, iswaiting] = useState(true);
 
   useEffect(async () => {
-
     try{
       if(value != ""){
         return
       }else{
         let response = await GetAllProducts();
-        Isloading(false);
-        setValue(response || "No data");
+        iswaiting(false);
+        setValue(response);
       }
     }catch(error){
       console.log(error)
@@ -30,7 +27,7 @@ const ListProducts = () => {
 
   return (
     <>
-      {loading ? (
+      {wait ? (
         <LoadingView />
       ) : (
         <FlatList

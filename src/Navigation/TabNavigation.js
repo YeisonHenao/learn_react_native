@@ -2,7 +2,7 @@ import React from "react";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { StoreStackNavigation, RickAndMortyStackNavigation} from "./StackStore";
-import HomeDrawerNavigator from '../Navigation/DrawerNavigation'
+import HomeDrawerNavigator from './DrawerNavigation'
 import Feather from "react-native-vector-icons/Feather";
 
 const Tab = createBottomTabNavigator();
@@ -12,7 +12,7 @@ const BottomTabNavigator = () => {
     <SafeAreaProvider>
       <Tab.Navigator
         screenOptions={({ route }) => ({
-          tabBarIcon: ({ focused, color, size }) => {
+          tabBarIcon: ({ focused, color, size}) => {
             let iconName;
             if (route.name === "Main") {
               iconName = focused ? "home" : "home";
@@ -21,20 +21,24 @@ const BottomTabNavigator = () => {
             } else if (route.name === "Rick And Morty") {
               iconName = focused ? "film" : "film";
             }
-            return <Feather name={iconName} size={size} color={color} />;
+            return <Feather name={iconName} size={size=20} color={color} />;
           },
           tabBarActiveTintColor: "#256CD3",
-          tabBarInactiveTintColor: "#fff",
+          tabBarInactiveTintColor: "#000",
           headerShown: false,
           tabBarStyle: {
-            backgroundColor: "#232223",
-              borderColor:"#232223",
+            backgroundColor:"#FFFBE9",
+            borderColor:"#FFFBF9",
             paddingBottom: 6,
-            height: 60,
+            height: 50,
+            borderTopRightRadius:8,
+            borderTopLeftRadius:8
           },
         })}
       >
-        <Tab.Screen name="Main" component={HomeDrawerNavigator} />
+        <Tab.Screen
+          name="Main" 
+          component={HomeDrawerNavigator} />
         <Tab.Screen name="Store" component={StoreStackNavigation} />
         <Tab.Screen
           name="Rick And Morty"

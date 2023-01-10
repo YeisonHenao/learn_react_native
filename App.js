@@ -1,7 +1,7 @@
 import * as React from "react";
 import 'react-native-gesture-handler';
 import { NavigationContainer } from "@react-navigation/native";
-import BottomTabNavigator from './Navigation/TabNavigation'
+import BottomTabNavigator from './src/Navigation/TabNavigation'
 
 const App = () => {
   return(
