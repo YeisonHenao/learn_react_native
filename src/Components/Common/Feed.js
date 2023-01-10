@@ -1,5 +1,5 @@
 import { Text , View  } from "react-native";
-import style from "../../assets/Styles/StoreStyles/FeedStyle";
+import style from "../../../assets/Styles/StoreStyles/FeedStyle";
 import BadgeUser from "./BadgeUser";
 
 const Feed = ({ navigation }) => {

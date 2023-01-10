@@ -4,16 +4,9 @@ import {
   DrawerContentScrollView,
   DrawerItemList,
 } from '@react-navigation/drawer';
-import {DrawerActions} from '@react-navigation/native';
 import Feather from "react-native-vector-icons/Feather";
-import {Pressable} from 'react-native'
-
-
-//import Feed from '../Components/Common/Feed'
 import Home from "../Screens/Home";
 import Notifications from '../Components/Common/Notifications';
-
-
 
 const CustomDrawerContent =(props) => {
   return (
@@ -28,7 +21,7 @@ const Drawer = createDrawerNavigator();
 const HomeDrawerNavigator = () => {
   return (
     <Drawer.Navigator
-        screenOptions={{headerShown:true}}
+        screenOptions={{headerShown:false}}
         useLegacyImplementation
         drawerContent={(props) => <CustomDrawerContent {...props} />}
     >
@@ -36,9 +29,9 @@ const HomeDrawerNavigator = () => {
         name="Home"
         options={{
           title: "Home",
-          drawerIcon: ({ color, size, focuced }) => (
+          drawerIcon: ({ color, size, focused }) => (
             <Feather
-              name={focuced ? "menu" : "menu"}
+              name={focused ? "menu" : "menu"}
               size={size}
               color={color}
             />
@@ -50,9 +43,9 @@ const HomeDrawerNavigator = () => {
         name="Notifications"
         options={{
           title: "Notifications",
-          drawerIcon: ({ color, size, focuced }) => (
+          drawerIcon: ({ color, size, focused }) => (
             <Feather
-              name={focuced ? "bell" : "bell"}
+              name={focused ? "bell" : "bell"}
               size={size}
               color={color}
             />
