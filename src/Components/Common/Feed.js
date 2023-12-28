@@ -1,5 +1,5 @@
 import { Text , View  } from "react-native";
-import style from "../../assets/Styles/StoreStyles/FeedStyle";
+import style from "../../../assets/Styles/StoreStyles/FeedStyle";
 import BadgeUser from "./BadgeUser";
 
 const Feed = ({ navigation }) => {
@@ -10,8 +10,6 @@ const Feed = ({ navigation }) => {
         <View style={style.title}>
           <BadgeUser/>
         </View>
-      {/* <Text style={style.title}>Home Screen</Text> */}
-
     </View>
   );
 }

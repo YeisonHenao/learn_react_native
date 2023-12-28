@@ -2,7 +2,7 @@ import React from "react";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { StoreStackNavigation, RickAndMortyStackNavigation} from "./StackStore";
-import HomeDrawerNavigator from '../Navigation/DrawerNavigation'
+import HomeDrawerNavigator from './DrawerNavigation'
 import Feather from "react-native-vector-icons/Feather";
 
 const Tab = createBottomTabNavigator();

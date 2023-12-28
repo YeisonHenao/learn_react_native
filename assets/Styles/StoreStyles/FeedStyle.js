@@ -6,16 +6,16 @@ const widthWindow = Dimensions.get("window").width;
 const style = StyleSheet.create({
   headerComponent:{
     backgroundColor:"#CCD6A6",
-    borderBottomEndRadius:30,
-    borderBottomLeftRadius:30,
-    height:100,
+    borderBottomRightRadius:780,
+    borderBottomLeftRadius:780,
+    height:120,
     width:widthWindow,
     position:"absolute"
   },
   title:{
     display:'flex',
     textAlign:"center",
-    color: 'rgba(255, 255, 255, 0.7)',
+    //color: 'rgba(255, 255, 255, 0.7)',
     fontSize:40,
     zIndex:1,
     elevation:1,

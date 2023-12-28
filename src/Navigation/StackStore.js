@@ -3,12 +3,13 @@ import { createStackNavigator } from "@react-navigation/stack";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 import BadgeShoppingCart from "../Components/Store/BadgeShoppingCart";
 
-//componentes
+//components
 import HomeView from "../Screens/Home";
 import StoreView from "../Screens/Store";
 import DetailStoreView from "../Screens/DetailStore";
 import ShoppingCartView from "../Screens/ShoppingCart";
 import RickAndMortyView from "../Screens/RickAndMortyView";
+import ViewDetail from "../Components/RickAndMorty/ViewDetail";
 
 const Stack = createStackNavigator();
 
@@ -59,6 +60,7 @@ const RickAndMortyStackNavigation = () => {
     <SafeAreaProvider>
       <Stack.Navigator screenOptions={{ headerShown: false }}>
         <Stack.Screen name="Rick And Morty" component={RickAndMortyView} />
+          <Stack.Screen name="view_detail" component={ViewDetail} />
       </Stack.Navigator>
     </SafeAreaProvider>
   );

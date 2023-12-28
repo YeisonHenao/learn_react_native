@@ -10,7 +10,6 @@ const style = StyleSheet.create({
      width: widthDevice - 200,
      marginTop:3,
      margin: 5,
-     borderWidht: 0.5,
      borderRadius: 6,
      borderColor: "#eee",
      height: heightDevice - 420
@@ -27,7 +26,6 @@ const style = StyleSheet.create({
   },
   nameCharacter:{
     textAlign:"center",
-    fontFamily:"Helvetica"
   }
 })
 
