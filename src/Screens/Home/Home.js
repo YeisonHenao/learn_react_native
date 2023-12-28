@@ -1,5 +1,5 @@
 import { SafeAreaView } from "react-native";
-import Feed from "../Components/Common/Feed";
+import Feed from "../../Components/Common/Feed";
 
 const Home = () => {
   return (

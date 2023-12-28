@@ -5,7 +5,7 @@ import {
   DrawerItemList,
 } from '@react-navigation/drawer';
 import Feather from "react-native-vector-icons/Feather";
-import Home from "../Screens/Home";
+import Home from "../Screens/Home/Home";
 import Notifications from '../Components/Common/Notifications';
 
 const CustomDrawerContent =(props) => {
