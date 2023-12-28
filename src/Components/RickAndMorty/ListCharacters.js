@@ -6,33 +6,34 @@ import GetAllCharacters from "../../repository/Rick And Morty/RepositoryRickAndM
 
 const ListCharacters = () => {
 
-  const [Loading, IsLoading] = useState(true)
-  const [value,SetValue] = useState("")
+  const [characters, setCharacters] = useState([])
+  const [loading, setLoading] = useState(true);
 
   useEffect(async() => {
     try{
-      if(value != ""){
-        return
-      } else{
-        let response = await GetAllCharacters();
-        SetValue(response.results || "no data");
-        IsLoading(false);
-      }
+      getInfo()
     }catch(error){
       console.log(error)
     }
-  }, [value])
+  }, [])
+
+  const getInfo = async () => {
+    const response = await GetAllCharacters();
+    console.log(response);
+    setCharacters(response)
+    setLoading(false)
+  }
   
   const renderItem = ({item}) => <CardCharacter character={item} />;
 
   return(
     <>
       {
-        Loading ? (
+        loading ? (
           <LoadingView />
         ): (
           <FlatList 
-            data={value}
+            data={characters}
             renderItem={renderItem}
             keyExtractor={(item) => item.id}
             numColumns={2}

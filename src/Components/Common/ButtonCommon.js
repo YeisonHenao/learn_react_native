@@ -25,8 +25,8 @@ const ButtonCommon = (props) => {
         display:"flex",
         flexDirection:"row",
       }}>
-          <Feather style={{marginTop:3, marginLeft:3 , marginRight:3}} size={props.size} name={props.name} color={props.color} />
-          <Text style={{padding:4}}>{props.msg}</Text>
+          <Feather style={{marginTop:10, marginLeft:6 , marginRight:6}} size={props.size} name={props.name} color={props.color} />
+          <Text style={{padding:10}}>{props.msg}</Text>
       </View>
     </TouchableHighlight>
   );

@@ -31,7 +31,7 @@ const ViewDetail = ({ product }) => {
           display:"flex",
           flexDirection:"row",
         }}>
-          <ButtonCommon size={20} color={"#000"} name="shopping-cart" msg="Add to cart" back={"red"} />
+          <ButtonCommon size={30} color={"#000"} name="shopping-cart" msg="Add to cart" back={"red"} />
           <ButtonCommon size={20} color={"#000"} name="credit-card" msg="Pay item" back={"green"}/>
         </View>
       </ScrollView>

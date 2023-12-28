@@ -5,7 +5,7 @@ export default async () => {
     .get(`/character`)
     .then((response) => {
       if(response){
-        return response
+        return response.data
       }else{
         return {data: {message: "Ha ocurrido un error"}};
       }
