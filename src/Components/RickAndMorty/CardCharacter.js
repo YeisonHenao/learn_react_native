@@ -1,5 +1,4 @@
 import { TouchableOpacity, Image, Text , SafeAreaView } from "react-native";
-import {SafeAreaProvider} from "react-native-safe-area-context";
 import { useNavigation } from "@react-navigation/core";
 import style from '../../../assets/Styles/RickAndMortyStyles/CardCharacter'
 

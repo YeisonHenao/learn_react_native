@@ -5,33 +5,35 @@ import CardProducts from "./CardProducts";
 import LoadingView from "../Common/LoadingView";
 
 const ListProducts = () => {
-  const [value, setValue] = useState("");
-  const [wait, iswaiting] = useState(true);
+  const [products, setProducts] = useState([]);
+  const [loading, setLoading] = useState(true);
 
-  useEffect(async () => {
+
+  useEffect(() => {
     try{
-      if(value != ""){
-        return
-      }else{
-        let response = await GetAllProducts();
-        iswaiting(false);
-        setValue(response);
-      }
-    }catch(error){
-      console.log(error)
+      getInfo()
+    } catch(error){
+      console.log(error);
     }
-  }, []);
+  },[])
+
+
+  const getInfo = async () => {
+    const response = await GetAllProducts();
+    setProducts(response)
+    setLoading(false)
+  }
 
 
   const renderItem = ({ item }) => <CardProducts product={item} />;
 
   return (
     <>
-      {wait ? (
+      {loading ? (
         <LoadingView />
       ) : (
         <FlatList
-          data={value}
+          data={products}
           renderItem={renderItem}
           keyExtractor={(item) => item.id}
           numColumns={1}

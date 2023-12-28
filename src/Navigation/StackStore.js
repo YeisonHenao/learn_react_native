@@ -1,5 +1,5 @@
 /**
- * Importación de modulos para la creación de la navegación de Stack
+ * Importación de módulos para la creación de la navegación de Stack
  */
 import React from "react";
 import { createStackNavigator } from "@react-navigation/stack";
@@ -34,7 +34,7 @@ const MainStackNavigator = () => {
 
 /**
  * StoreStackNavigation crea el stack empleado en la vista de la tienda
- * @returns Regresa el Stack de la vista de la tienda donde estan alojadas el carrito de compra y entre otras vistas
+ * @returns Regresa el Stack de la vista de la tienda donde están alojadas el carrito de compra y entre otras vistas
  */
 const StoreStackNavigation = () => {
   return (
