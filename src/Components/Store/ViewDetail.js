@@ -3,6 +3,12 @@ import { Divider } from "react-native-paper";
 import ButtonCommon from "../Common/ButtonCommon";
 import style from "../../../assets/Styles/StoreStyles/DetailStoreStyle";
 
+/*
+TODO:
+1. Refactorizar componente de botones para una mejor vista.
+*/
+
+
 const ViewDetail = ({ product }) => {
   const data = product;
 

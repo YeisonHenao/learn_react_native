@@ -1,6 +1,6 @@
 import React from "react";
 import {ScrollView } from "react-native";
-import ViewDetail from "../Components/Store/ViewDetail";
+import ViewDetail from "../../../Components/Store/ViewDetail";
 
 const DetailStore = ({ route }) => {
 
