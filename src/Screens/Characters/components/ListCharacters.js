@@ -1,27 +1,29 @@
-import { useEffect , useState } from "react"
+import { useEffect , useState, useRef } from "react"
 import { FlatList } from "react-native"
-import LoadingView from "../Common/LoadingView"
+import LoadingView from "../../../Components/Common/LoadingView"
 import CardCharacter from "./CardCharacter"
-import GetAllCharacters from "../../repository/Rick And Morty/RepositoryRickAndMorty"
+import repository from '../../../repository/Rick And Morty/RepositoryRickAndMorty'
+import GetAllCharacters from "../../../repository/Rick And Morty/RepositoryRickAndMorty"
 
 const ListCharacters = () => {
 
   const [characters, setCharacters] = useState([])
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
 
   useEffect(async() => {
     try{
-      getInfo()
+      if(!loading){
+        getInfo()
+      }
     }catch(error){
       console.log(error)
     }
   }, [])
 
   const getInfo = async () => {
-    const response = await GetAllCharacters();
-    console.log(response);
+    const response = await repository()
     setCharacters(response)
-    setLoading(false)
+    setLoading(true)
   }
   
   const renderItem = ({item}) => <CardCharacter character={item} />;
@@ -29,7 +31,7 @@ const ListCharacters = () => {
   return(
     <>
       {
-        loading ? (
+        !loading ? (
           <LoadingView />
         ): (
           <FlatList 

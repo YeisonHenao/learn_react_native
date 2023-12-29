@@ -1,6 +1,6 @@
 import { TouchableOpacity, Image, Text , SafeAreaView } from "react-native";
 import { useNavigation } from "@react-navigation/core";
-import style from '../../../assets/Styles/RickAndMortyStyles/CardCharacter'
+import style from '../../../../assets/Styles/RickAndMortyStyles/CardCharacter'
 
 const CardCharacter = ({ character }) => {
   const navigation = useNavigation();

@@ -1,5 +1,5 @@
-import AllCharacters from "./AllCharacters";
+import GetAllCharacters from "./GetAllCharacters"
 
 export default {
-  AllCharacters
+  GetAllCharacters
 }
