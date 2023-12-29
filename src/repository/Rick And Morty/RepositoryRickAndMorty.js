@@ -1,7 +1,7 @@
-import service from '../../service/RickAndMorty'
+import service from '../../service/RickAndMorty/index'
 
   const GetAllCharacters = async () => {
-    let response = await service.AllCharacters();
+    let response = await service.GetAllCharacters()
     if (response) {
       return response.data
     } else{

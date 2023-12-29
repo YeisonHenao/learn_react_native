@@ -13,8 +13,8 @@ import HomeView from "../Screens/Home/Home";
 import StoreView from "../Screens/Store/Store";
 import DetailStoreView from "../Screens/Store/Detail/DetailStore";
 import ShoppingCartView from "../Screens/Store/ShoppingCart/ShoppingCart";
-import RickAndMortyView from "../Screens/RickAndMorty/RickAndMortyView";
-import ViewDetail from "../Components/RickAndMorty/ViewDetail";
+import RickAndMortyView from "../Screens/Characters/RickAndMorty";
+import ViewDetail from "../Screens/Characters/components/ViewDetail";
 
 const Stack = createStackNavigator();
 
