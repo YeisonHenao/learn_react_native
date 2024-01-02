@@ -1,8 +1,8 @@
 import { Text, Image, SafeAreaView, ScrollView, View, } from "react-native";
 import { Divider } from "react-native-paper";
-import ButtonCommon from "../../../Components/Common/ButtonCommon";
+import ButtonCommon from "../../../Components/ButtonCommon";
 import style from "../../../../assets/Styles/StoreStyles/DetailStoreStyle";
-import TLButton from "../../../Components/Common/TLButton";
+import TLButton from "../../../Components/TLButton";
 
 /*
 TODO:
