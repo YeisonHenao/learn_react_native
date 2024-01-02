@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "test",
-    "slug": "test",
+    "name": "Aplicación de aprendizaje",
+    "slug": "Aprendizaje",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/rick.svg",

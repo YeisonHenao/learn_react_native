@@ -1,7 +1,8 @@
 import { Text, Image, SafeAreaView, ScrollView, View, } from "react-native";
 import { Divider } from "react-native-paper";
-import ButtonCommon from "../Common/ButtonCommon";
-import style from "../../../assets/Styles/StoreStyles/DetailStoreStyle";
+import ButtonCommon from "../../../Components/Common/ButtonCommon";
+import style from "../../../../assets/Styles/StoreStyles/DetailStoreStyle";
+import TLButton from "../../../Components/Common/TLButton";
 
 /*
 TODO:
@@ -31,6 +32,7 @@ const ViewDetail = ({ product }) => {
           display:"flex",
           flexDirection:"row",
         }}>
+          <TLButton Title="Hello" Method={() => console.log("Hello world")} />
           <ButtonCommon size={30} color={"#000"} name="shopping-cart" msg="Add to cart" back={"red"} />
           <ButtonCommon size={20} color={"#000"} name="credit-card" msg="Pay item" back={"green"}/>
         </View>
