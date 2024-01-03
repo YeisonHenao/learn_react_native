@@ -4,7 +4,7 @@
 import React from "react";
 import { createStackNavigator } from "@react-navigation/stack";
 import { SafeAreaProvider } from "react-native-safe-area-context";
-import BadgeShoppingCart from "../Components/Store/BadgeShoppingCart";
+import BadgeShoppingCart from "../Screens/Store/components/BadgeShoppingCart";
 
 /**
  * Importación de vistas a ser usadas e identificadas en cada Stack
@@ -57,11 +57,11 @@ const StoreStackNavigation = () => {
           options={{ title: "Store", headerRight: () => <BadgeShoppingCart /> }}
           component={StoreView}
         />
-        <Stack.Screen 
-          name="Detail" 
-          options={{ title: "Store", headerRight: () => <BadgeShoppingCart /> }} 
-          component={DetailStoreView} 
-          />
+        <Stack.Screen
+          name="Detail"
+          options={{ title: "Store", headerRight: () => <BadgeShoppingCart /> }}
+          component={DetailStoreView}
+        />
         <Stack.Screen name="Cart" component={ShoppingCartView} />
       </Stack.Navigator>
     </SafeAreaProvider>
@@ -76,8 +76,8 @@ const RickAndMortyStackNavigation = () => {
   return (
     <SafeAreaProvider>
       <Stack.Navigator screenOptions={{ headerShown: false }}>
-        <Stack.Screen name="Rick And Morty" component={RickAndMortyView} />
-          <Stack.Screen name="view_detail" component={ViewDetail} />
+        <Stack.Screen name="rick_and_morty" component={RickAndMortyView} />
+        <Stack.Screen name="view_detail" component={ViewDetail} />
       </Stack.Navigator>
     </SafeAreaProvider>
   );

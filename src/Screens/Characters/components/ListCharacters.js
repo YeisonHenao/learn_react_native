@@ -1,9 +1,8 @@
 import { useEffect , useState, useRef } from "react"
 import { FlatList } from "react-native"
-import LoadingView from "../../../Components/Common/LoadingView"
+import LoadingView from "../../../Components/LoadingView"
 import CardCharacter from "./CardCharacter"
 import repository from '../../../repository/Rick And Morty/RepositoryRickAndMorty'
-import GetAllCharacters from "../../../repository/Rick And Morty/RepositoryRickAndMorty"
 
 const ListCharacters = () => {
 

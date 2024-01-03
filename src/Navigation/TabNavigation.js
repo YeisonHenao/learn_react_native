@@ -29,8 +29,8 @@ const BottomTabNavigator = () => {
           tabBarStyle: {
             backgroundColor:"#FFFBE9",
             borderColor:"#FFFBF9",
-            paddingBottom: 30,
-            height: 80,
+            paddingBottom: 15,
+            height: 60,
             borderTopRightRadius:8,
             borderTopLeftRadius:8
           },

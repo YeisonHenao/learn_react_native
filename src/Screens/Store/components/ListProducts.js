@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { FlatList } from "react-native";
 import GetAllProducts from "../../../repository/Store/RepositoryStore";
 import CardProducts from "./CardProducts";
-import LoadingView from "../../../Components/Common/LoadingView";
+import LoadingView from "../../../Components/LoadingView";
 
 const ListProducts = () => {
   const [products, setProducts] = useState([]);
