@@ -6,7 +6,6 @@ import {
 } from '@react-navigation/drawer';
 import Feather from "react-native-vector-icons/Feather";
 import Home from "../Screens/Home/Home";
-import Notifications from '../Components/Common/Notifications';
 
 const CustomDrawerContent =(props) => {
   return (
@@ -39,19 +38,6 @@ const HomeDrawerNavigator = () => {
         }}
           component={Home} 
         />
-      <Drawer.Screen 
-        name="Notifications"
-        options={{
-          title: "Notifications",
-          drawerIcon: ({ color, size, focused }) => (
-            <Feather
-              name={focused ? "bell" : "bell"}
-              size={size}
-              color={color}
-            />
-          ),
-        }}
-        component={Notifications} />
     </Drawer.Navigator>
   );
 }

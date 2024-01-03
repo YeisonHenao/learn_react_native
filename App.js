@@ -1,14 +1,17 @@
 import * as React from "react";
-import 'react-native-gesture-handler';
+import { SafeAreaProvider } from "react-native-safe-area-context";
+import "react-native-gesture-handler";
 import { NavigationContainer } from "@react-navigation/native";
-import BottomTabNavigator from './src/Navigation/TabNavigation'
+import BottomTabNavigator from "./src/Navigation/TabNavigation";
 
 const App = () => {
-  return(
-    <NavigationContainer>
-      <BottomTabNavigator />
-    </NavigationContainer>
-  )
-}
+  return (
+    <SafeAreaProvider>
+      <NavigationContainer>
+        <BottomTabNavigator />
+      </NavigationContainer>
+    </SafeAreaProvider>
+  );
+};
 
 export default App;
