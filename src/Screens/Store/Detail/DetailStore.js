@@ -2,6 +2,11 @@ import React from "react";
 import {ScrollView } from "react-native";
 import ViewDetail from "../components/ViewDetail";
 
+/**
+ * 
+ * @param {string} param0 ruta del producto seleccionado
+ * @returns Vista de detalle del producto
+ */
 const DetailStore = ({ route }) => {
 
   return (
